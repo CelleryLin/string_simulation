@@ -4,9 +4,11 @@
 
 ### Modeling
 From the wave equation with damping
+
 $$
 \frac{\partial^2 y(x,t)}{\partial t^2}+b \frac{\partial y(x,t)}{\partial t}=c^2 \frac{\partial^2 y(x,t)}{\partial x^2}
 $$
+
 where
 - $y(x,t)$: displacement in y direction
 - $t$: time
@@ -15,12 +17,15 @@ where
 - $c$: wave speed
 
 using finite difference method (FDM), we can discretize the equation as
+
 $$
 u_i^{n+1}=\left(1+\frac{1}{2} b \Delta t\right)^{-1}\left(\left(\frac{1}{2} b \Delta t-1\right) u_i^{n-1}+2 u_i^n+C^2\left(u_{i+1}^n-2 u_i^n+u_{i-1}^n\right)\right).
 $$
+
 (explicit method)
 
 And the stability criterion is:
+
 $$
 \frac{c\Delta t}{\Delta x} \leq 1
 $$
